@@ -4,7 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_base_template/base/networking/_index.dart';
+import 'package:getx_base_template/app/base/networking/_index.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 import 'app/router/app_pages.dart';
@@ -26,9 +26,14 @@ void main() async {
       ),
       scrollBehavior: MyBehavior(),
       debugShowCheckedModeBanner: false,
-      title: "Mangrove Jembatan Api-Api",
+      title: "Base",
       initialRoute: Pages.MAIN,
       getPages: Pages.routes,
+      builder: ((context, child) {
+        final mediaQueryData = MediaQuery.of(context);
+        final scale = mediaQueryData.textScaleFactor.clamp(0.8, 0.9);
+        return MediaQuery(data: MediaQuery.of(context).copyWith(textScaleFactor: scale), child: child!);
+      }),
       // navigatorObservers: [AnalyticsService().getAnalyticsObserver()],
     ),
   );

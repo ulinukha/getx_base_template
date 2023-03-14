@@ -1,5 +1,5 @@
 import 'package:getx_base_template/app/router/app_pages.dart';
-import 'package:getx_base_template/base/lifecycle/_index.dart';
+import 'package:getx_base_template/app/base/lifecycle/_index.dart';
 
 class MainController extends BaseController {
   @override

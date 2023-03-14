@@ -1,4 +1,4 @@
-import 'package:getx_base_template/base/lifecycle/_index.dart';
+import 'package:getx_base_template/app/base/lifecycle/_index.dart';
 
 class AboutController extends BaseController {
   @override
